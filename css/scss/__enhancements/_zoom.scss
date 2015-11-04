@@ -1,0 +1,54 @@
+@if $product-zoom == true {
+    /*
+     * ##ZOOM.SCSS
+     */
+    .images__zoom {
+        font-family: $icon-font;
+        z-index: 9;
+        padding: 10px;
+        font-size: 1.25em;
+        >* {
+            color: $main-colour;
+            cursor: pointer;
+            display: inline-block;
+            @include size(1.5em);
+            font-size: 1em;
+            text-align: center;
+            line-height: 1.75em;
+            @include user-select(none);
+            &:not(:first-child) {
+                display: none;
+            }
+        }
+        .js-zoom-show {
+            background-color: $main-colour;
+            color: $white;
+            height: 100%;
+            &:before {
+                content: '\e85b';
+            }
+        }
+        .js-zoom-hide {
+            @extend .js-zoom-show;
+            &:before {
+                content: "\e80c";
+            }
+        }
+    }
+
+    .js-zoom-in.zoom--in {
+        display: inline-block;
+        width: 50px;
+        background-color: $main-colour;
+        color: $white;
+        &:before {
+            content: '\e80d';
+        }
+    }
+    .js-zoom-out.zoom--out {
+        @extend .js-zoom-in.zoom--in;
+        &:before {
+            content: '\e80e';
+        }
+    }
+}

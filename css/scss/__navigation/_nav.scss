@@ -1,0 +1,118 @@
+// horizontal navigation
+.nav-wrapper nav {
+    ul.horizontal-list {
+        ul {
+            li:hover ul {
+                display: block;
+            }
+        }
+        li {
+            position: relative;
+            ul {
+                @include position(absolute, 1.75em null null 0);
+                left: 0;
+                top: 1.75em;
+                z-index: 10;
+                padding: 0;
+                display: list-item;
+                overflow: hidden;
+                height: 0;
+                opacity: 0;
+                transition: opacity 300ms ease-in;
+                li {
+                    height: 0;
+                    background: none;
+                    border: 0;
+                    padding: 0;
+                }
+                a {
+                    display: block;
+                    white-space: nowrap;
+                    text-transform: capitalize;
+                    padding: 0 .25em;
+                    margin: .25em;
+                    background-color: $nav-bg-colour;
+                    color: $nav-text-colour;
+                }
+                ul {
+                    left: 95%;
+                    top: 0;
+                    height: 0;
+                    display: none;
+                    margin-top: 0;
+                    &.build-left {
+                        left: initial;
+                        right: 95%;
+                    }
+                }
+            }
+            &:hover {
+                ul {
+                    @include size(auto);
+                    opacity: 1;
+                    li {
+                        display: block;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// vertical navigation
+.nav-wrapper nav {
+    ul.nav--main.vertical-list {
+        >li {
+            position: relative;
+            >a {
+                &:after {
+                    font-family: $icon-font;
+                    content: "\e82c";
+                    float: right;
+                }
+            }
+            ul {
+                padding: 0;
+                display: none;
+                li {
+                    a {
+                        background-color: lighten( $nav-bg-colour, 30% );
+                    }
+                }
+            }
+            &.section--expanded {
+                >a {
+                    &:after {
+                        content: "\e82e";
+                    }
+                }
+            }
+        }
+        a {
+            background-color: $nav-bg-colour;
+            color: $nav-text-colour;
+            &:hover {
+                text-decoration: none;
+                background-color: $main-colour;
+            }
+        }
+    }
+}
+
+.nav-section {
+    @include position(absolute, null 0 null null);
+    @include size(30px 100%);
+    right: 0;
+    cursor: pointer;
+}
+
+
+nav .slicknav_menu {
+    li {
+        text-align: left;
+    }
+    ul > li ul li a {
+        background: transparent;
+    }
+}

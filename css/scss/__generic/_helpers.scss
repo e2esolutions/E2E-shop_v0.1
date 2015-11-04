@@ -1,0 +1,139 @@
+/*
+ * ##HELPER.SCSS
+ */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+    &:before {
+        content: "";
+        display: block;
+        @include size(0 150%);
+    }
+}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    @include size(1px);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    &.focusable {
+        &:active {
+            @extend %extend_2;
+        }
+        &:focus {
+            @extend %extend_2;
+        }
+    }
+}
+.invisible {
+    visibility: hidden;
+}
+.f-right {
+    float: right;
+}
+.f-left {
+    float: left;
+}
+.clearfix {
+    *zoom: 1;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+// makes <ul>s and <ol>s horizontal
+.horizontal-list {
+    display: table;
+    padding: 0;
+    margin: .5em 0;
+    li {
+        display: table-cell;
+        a {
+            display: block;
+            text-align: center;
+            margin: 0 5px;
+        }
+    }
+}
+
+// add --even for list items to be evenly spaced
+.horizontal-list--even {
+    @extend .horizontal-list;
+    table-layout: fixed;
+}
+
+.vertical-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: block;
+        a {
+            display: block;
+        }
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.display-box {
+    background-color: $light-grey;
+    padding: 20px;
+    margin-bottom: 1em;
+    display: table;
+    width: 100%;
+    h2.spill {
+        margin: -20px -20px 10px -20px;
+        padding: 5px 15px;
+        background-color: $main-colour;
+        color: $white;
+        font-weight: normal;
+    }
+}
+
+
+// messages and alerts
+
+.msg {
+    font-size: .85em;
+    text-transform: capitalize;
+    color: #FFF;
+    padding: .25em .5em;
+    border-radius: 3px;
+    float: right;
+}
+.msg--sucsess {
+    @extend .msg;
+    background-color: #55C31C;
+}
+
+
+// e2e logo -- commonly used in page footer
+
+.e2e_logo {
+    font-size: 0;
+    &:after {
+        font: {
+            family: $icon-font;
+            size: 1rem;
+        }
+        content: "\e83d";
+    }
+}

@@ -1,0 +1,45 @@
+/*
+ * ##BUTTONS.SCSS
+ */
+.button {
+    background-color: $main-colour;
+    padding: .5em .75em;
+    color: $white;
+    text-decoration: none;
+    font-size: .9em;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+    &.checkout {
+        display: inline-block;
+        width: auto;
+        line-height: 2em;
+        margin: 0.67em 0;
+    }
+    &.js-basket--add {
+        position: relative;
+        span {
+            @include position(absolute, 0 null null null);
+            display: block;
+            @include size(50% 100%);
+            font-size: 1.5em;
+            background-color: inherit;
+            color: inherit;
+            border: 1px solid $white;
+        }
+    }
+}
+
+.compact {
+    padding: .25em .5em;
+    border-radius: .5em;
+    display: inline;
+}
+
+.button.cancel:before {
+    content: "\e80c";
+    font-family: $icon-font;
+    position: relative;
+    left: -.25em;
+}

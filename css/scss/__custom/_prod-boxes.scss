@@ -1,0 +1,63 @@
+/*
+ * product and category boxes
+ */
+ 
+@if $default-prod-box == true { 
+
+// Default product box mark up
+//  <div class="grid__item">
+//      <a href="product.html">
+//          <div class="image-container">
+//              <img src="images/products/1.jpg" alt="Product description">
+//          </div>
+//          <div class="data-container">
+//              <h3>Product Title</h3>
+//              <div class="data-container__price">
+//                  <span class="price--rrp">19.99</span>
+//                  <span class="price">&pound;9.99</span>
+//              </div>
+//          </div>
+//      </a>
+//  </div>  
+
+    .grid__item {
+        background: $white;
+        padding: .5em;
+        box-shadow: 1px 1px 4px $black;
+        .data-container {
+            margin-top: .5em;
+            h3 {
+                font: {
+                    size: 1.25em;
+                    family: $prod-box-heading;
+                    weight: 100;
+                }
+                height: 4.25em;
+                overflow: hidden;
+                &.spill {
+                    margin: -.5em -.5em .5em;
+                    padding: .5em;
+                }
+            }
+            .data-container--price {
+                letter-spacing: -.5em;
+                .price {
+                    letter-spacing: normal;
+                    display: inline-block;
+                    width: 50%;
+                }
+                .price--rrp {
+                    @extend .price;
+                }
+            }
+            .button {
+                display: block;
+                margin-top: .5em;
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+    
+}

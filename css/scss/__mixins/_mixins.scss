@@ -1,0 +1,22 @@
+// write your own mixins here
+
+
+// * background images *
+
+//  .testing-input {
+//      @include background('/my/img/path.png');
+//  }
+
+//  .testing-output {
+//    background-image: url("/my/img/path.png");
+//    background-position: 0 0;
+//    background-repeat: no-repeat;
+// }
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+

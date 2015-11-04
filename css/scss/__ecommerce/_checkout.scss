@@ -1,0 +1,31 @@
+.findAddr, .sametickholder {
+    /*display:none;*/
+}
+
+.sectionComplete, 
+.sectionComplete .lookuphide {
+    /*display:block;*/
+}
+
+/*.sectionComplete .findAddr,*/
+.sectionComplete .manAddr,
+.sectionComplete .nextbtn,
+.sectionComplete .sametickholder  {
+    display:none;
+}
+
+.checkout fieldset {
+	margin-bottom: 2em;
+	legend {
+		padding: 1em 0;
+		> span {
+			background-color: $main-colour;
+			color: $white;
+			padding: .25em .5em;
+		}
+	}
+}
+.required label:after {
+	content: " *";
+	color: $main-colour;
+}

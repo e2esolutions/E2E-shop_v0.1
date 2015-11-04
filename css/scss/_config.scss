@@ -1,0 +1,80 @@
+// ------- * configure * ---------- //
+
+// 1. is this site responsive? ( true | false )
+$responsive: true;
+
+// 2. define site-width inc. units...
+$site-width: 1024px;
+// 3. width of popup boxes
+$pop-width: 600px;
+
+// 3. enable/disable enhancements ( true | false )
+$slick-nav: true;
+
+$easy-responsive-tabs: true;
+
+$share-buttons: true;
+
+$slideshow: true;
+// if yes define paging style: ( text | button )
+$slideshow-pager: text;
+
+$product-zoom: true;
+
+$jquery-ui: true;
+
+$pop-ups: true;
+
+// 4. use default product-box style ( true | false )  -- read comments in /__custom/_prod-boxes.scss 
+$default-prod-box: false;
+// 5. consistent product box shrink ratio? ( yes | no )
+$consistent-shrink: yes;
+
+// 6. Use default header/footer styles ( yes | no )
+$default-header: yes;
+$default-footer: no;
+
+// 6. colors
+$main-colour: #2D1EAB;
+$light-blue: rgba(212, 238, 250, 0.55);
+$white: #fff;
+$black: #000;
+$light-grey: #DDD;
+$nav-bg-colour: #000;
+$nav-text-colour: #FFF;
+
+$box-colour: #E6E4E4;
+
+$selection-color: #b3d4fc; // mouse select colour
+$color_pattens_blue_approx: #ddf5ff; // light blue similar to above -
+// social branding colours
+$facebook-brand: #3b5998;
+$twitter-brand: #00aced;
+$linkdin-brand: #007bb6;
+$google-plus-brand: #dd4b39;
+$pintrest-brand: #cb2027;
+//
+$white_85: rgba(255, 255, 255, 0.85);
+$blue: blue;
+
+// 7. fonts
+$icon-font: 'e2e';
+// google-fonts -- pull font from google and define in font stacks
+$font--prim: 'https://fonts.googleapis.com/css?family=Karla:400,700';
+$font-sec: 'https://fonts.googleapis.com/css?family=Montserrat:400,700'; 
+//$font-third: 'http://fonts.googleapis.com/css?family=PT+Serif:400,700';
+
+// font stacks
+$main-font: 'Karla', sans-serif;
+$heading-font: 'Karla', sans-serif;
+$prod-box-heading: 'Open Sans', sans-serif;
+
+// base path for css images
+$imagedir:'../images/'; // define the base path before the mixin
+
+
+// ** don't touch ** - imports based on your selections 
+@import '__imports/imports';
+
+// uncomment line below and create your own Sass file for site specific styles
+@import '_overides';

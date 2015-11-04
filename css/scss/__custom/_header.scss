@@ -1,0 +1,41 @@
+@if $default-header == yes { 
+
+    /*
+     * HEADER.SCSS
+     */
+    
+    header[role=banner] {
+        padding: 1em 0;
+    }
+
+    .above-header-wrapper ul li:not(:last-child) a {
+        border-right: 1px solid $main-colour;
+        padding-right: .75em;
+    }
+    .header__search form {
+        position: relative;
+        max-width: 310px;
+        margin: 2.5em auto 0 auto;
+        input[type=search] {
+            width: 100%;
+            //Instead of the line below you could use @include box-sizing($bs)
+            box-sizing: border-box;
+            padding: .25em;
+            height: 2.5em;
+        }
+        button[type=submit] {
+            @include position(absolute, 0 0 null null);
+            height: 2.5em;
+            span {
+                font-size: 0;
+                &:before {
+                    content: "\e85b";
+                    font-size: 1rem;
+                    font-family: $icon-font;
+                    padding: .25em;
+                }
+            }
+        }
+    }
+
+}

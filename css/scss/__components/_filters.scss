@@ -1,0 +1,83 @@
+/*
+ * ##FILTERS.SCSS
+ */
+.filters {
+    display: none;  
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    h4 {
+        margin-bottom: .5em;
+        font-weight: normal;
+        border-bottom: 1px solid $main-colour;
+        &.filtered:before {
+            font-family: $icon-font;
+            content: "\e86d";
+            padding-right: .5em;
+        }
+    }
+    > ul {
+        ul {
+            font-size: 0.9em;
+            margin-top: 0;
+        }
+        >li {
+        /*
+            width: 23%;
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 2%;
+            margin-right: 1%;
+        */
+        }
+    }
+}
+
+@if $pop-ups == true {
+
+    .pop-wrapper {
+        .filters.popup {
+            min-height: 350px;
+            >ul {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .filter__nav {
+                width: 30%;
+                margin-right: 8%;
+                li {
+                    background-color: $main-colour;
+                    color: $white;
+                    margin-bottom: 2px;
+                    padding: .5em;
+                    &.active {
+                        background-color: $black;
+                    }
+                }
+            }
+            >ul:last-of-type {
+                width: 60%;
+                >li {
+                    display: none;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    
+    @if $responsive == true {
+        @media screen and (max-width: $pop-width) {
+            .pop-wrapper {
+                .filters.popup {
+                    ul {
+                        width: 100% !important;
+                        display: block;
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+
+}

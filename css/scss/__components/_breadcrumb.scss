@@ -1,0 +1,23 @@
+/*
+ * ##BREADCRUMB.SCSS
+ */
+.breadcrumb {
+    text-decoration: none;
+    margin: 1.5em 0;
+    font-size: .85em;
+    display: table;
+    width: 100%;
+    clear: both;
+    a {
+        &:after {
+            display: inline-block;
+            font-family: $icon-font;
+            content: "\e82c";
+            color: $main-colour;
+            padding: 0 .5em;
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+}

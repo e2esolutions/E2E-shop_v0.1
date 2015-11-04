@@ -1,0 +1,107 @@
+/*
+ * ##BASKET.SCSS
+ */
+
+.basket {
+    table {
+        width: 100%;
+    }
+    th {
+        text-align: left;
+        background-color: $main-colour;
+        font-family: $heading-font;
+        text-transform: uppercase;
+        padding: .5em 0;
+        color: $white;
+        font-weight: normal;
+        &:first-child {
+            padding-left: 20px;
+        }
+    }
+    tr {
+        :nth-child(3) {
+            text-align: right;
+        }
+        :nth-child(4) {
+            text-align: right;
+        }
+        td:last-child {
+            padding-right: 20px;
+        }
+        th:last-child {
+            padding-right: 20px;
+        }
+    }
+    input[name="quantity"] {
+        width: 30px;
+        text-align: center;
+        display: inline-block;
+    }
+}
+.basket__product {
+    td {
+        padding-bottom: 1.5em;
+        padding-top: .75em;
+        &:first-child {
+            width: 50%;
+            >span {
+                vertical-align: top;
+                display: inline-block;
+                width: 75%;
+                padding: .5em 0;
+            }
+            >.button {
+                margin: .25em 0;
+                display: inline-block;
+            }
+        }
+        &:nth-child(2) {
+            width: 20%;
+        }
+        &:nth-child(3) {
+            width: 15%;
+        }
+        &:nth-child(4) {
+            width: 15%;
+        }
+    }
+    .image-container {
+        max-width: 50px;
+        width: 20%;
+    }
+    input[value="Update"] {
+        width: auto;
+    }
+}
+.data__label {
+    width: 75%;
+    float: left;
+    font-weight: 600;
+    margin-bottom: .25em;
+}
+.data__price {
+    width: 25%;
+    float: left;
+    text-align: right;
+}
+.ship-region {
+    width: 100%;
+    clear: both;
+    padding-top: .5em;
+}
+.ship-list {
+    @extend .ship-region;
+}
+tr.basket__product td:first-child > div {
+    display: inline-block;
+    float: left;
+    margin-right: 1em;
+}
+.basket--discount td:first-child {
+    padding-left: 5em !important;
+}
+.basket__data > div {
+    display: table;
+    width: 100%;
+    margin: 1em 0;
+}

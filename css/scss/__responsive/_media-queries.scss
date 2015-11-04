@@ -1,0 +1,256 @@
+@if $responsive == true {
+
+    /*
+     * ##MEDIA-QUERIES.SCSS
+     */
+    @media only screen and(max-width: 768px) {
+        .resp-vtabs {
+            .resp-tab-content {
+                border: 1px solid $main-colour;
+                &:last-child {
+                    border-bottom: 1px solid $main-colour !important;
+                }
+            }
+            .resp-tabs-container {
+                border: none;
+                float: none;
+                width: 100%;
+                min-height: 100px;
+                clear: none;
+            }
+        }
+        .resp-accordion-closed {
+            display: none !important;
+        }
+        ul.resp-tabs-list {
+            display: none;
+        }
+        h2.resp-accordion {
+            display: block;
+        }
+        .field > :not(label) {
+            width: 100%;
+        }
+    }
+    .slicknav_menu {
+        display: none;
+    }
+    @media screen and(max-width: 849px) {
+        .slicknav_menu {
+            ul > li ul li {
+                height: auto;
+            }
+            li ul {
+                height: auto;
+                opacity: 1;
+                position: static;
+            }
+        }
+        .nav-wrapper > nav > ul {
+            display: none;
+        }
+        nav .slicknav_menu {
+            display: block;
+            background: $main-colour;
+            li {
+                border-top: 1px solid $white;
+            }
+            .slicknav_icon {
+                float: right;
+            }
+            a.slicknav_btn {
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+    @media screen and(max-width: 40em) {
+        .top-bar__nav {
+            ul {
+                display: none;
+                li {
+                    display: block;
+                    float: none;
+                    background: $main-colour;
+                    padding-right: 0;
+                }
+            }
+            .slicknav_btn {
+                float: left;
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 0;
+                background-color: $main-colour;
+                margin-left: 0;
+            }
+            .slicknav_menu {
+                background-color: rgba(0, 0, 0, 0);
+                display: block;
+                padding: 0;
+            }
+        }
+        .header__info {
+
+            > span span:first-child {
+                display: none;
+            }
+        }
+        .header__search {
+            clear: both;
+            width: 100%;
+            margin: 1em 0;
+            input[type="search"] {
+                width: 100%;
+                //Instead of the line below you could use @include box-sizing($bs)
+                box-sizing: border-box;
+            }
+            input[type="submit"] {
+                position: absolute;
+                right: 1em;
+                @include position(absolute, null 1em null null);
+            }
+        }
+        .header__logo {
+            width: 100%;
+            text-align: center;
+            float: none;
+            display: table;
+            img {
+                float: none;
+            }
+        }
+    }
+    @media(max-width: 849px) {
+        .product__data {
+            margin-top: 2em;
+        }
+        .stacked {
+            width: 100%;
+            caption {
+                background-image: none;
+            }
+            thead {
+                display: none;
+            }
+            tbody {
+                td {
+                    display: block;
+                    padding: .6em;
+                    width: 100% !important;
+                    &:before {
+                        content: attr(data-th);
+                        font-weight: 700;
+                        display: inline-block;
+                        width: 40%;
+                    }
+                }
+                tr {
+                    td {
+                        &:first-child {
+                            background: $main-colour;
+                            color: $white;
+                        }
+                        &:last-child {
+                            padding-right: .6em;
+                        }
+                    }
+                }
+            }
+            td * {
+                display: inline-block;
+            }
+        }
+        .basket__product {
+            .image-container {
+                max-width: 50px;
+            }
+            td:last-child .button {
+                width: auto;
+            }
+        }
+        header .header__info {
+            font-size: 1em;
+        }
+        footer > ul:last-of-type {
+            width: 50%;
+        }
+        table.stacked th {
+            display: none;
+        }
+        .basket .stacked tbody tr td:first-child:before {
+            display: none;
+        }
+        .basket__promotional-code td {
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3):before {
+                content: "Sub Total";
+            }
+        }
+        .basket__total td {
+            &:not(:last-child) {
+                display: none;
+            }
+            &:last-child:before {
+                content: "Total";
+            }
+        }
+        .basket__shipping td {
+            &:first-child {
+                label {
+                    width: 40%;
+                    float: left;
+                }
+                select {
+                    width: 60%;
+                    float: left;
+                }
+                fieldset {
+                    width: 100%;
+                    display: block;
+                }
+            }
+            &:nth-child(2) label {
+                width: 40%;
+                display: inline-block;
+                font-weight: bold;
+            }
+        }
+    }
+    @media(max-width: 699px) {
+        .listing-controls__sorting {
+            label {
+                width: 50%;
+                display: inline-block;
+            }
+            form {
+                width: 100%;
+                margin: .5em 0;
+            }
+        }
+        .listing-controls__layout {
+            ul {
+                display: none;
+            }
+        }
+        nav.listing-controls__pagination {
+            li:not(.prev):not(.next) {
+                display: none;
+            }
+        }
+    }
+    @media(max-width: 649px) {
+        .banner__text {
+            width: 100%;
+            float: none;
+        }
+        .banner__image {
+            display: none;
+        }
+        .footer__copyright >* {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

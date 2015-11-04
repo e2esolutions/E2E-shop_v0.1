@@ -1,0 +1,61 @@
+@if $share-buttons == true {
+    /*
+     * ##SHARE.SCSS
+     */
+
+    .share__button {
+        display: inline-block;
+        @include size (2em);
+        text-align: center;
+        line-height: 0;
+        background-color: $black;
+        color: $white;
+        cursor: pointer;
+        &:hover {
+            color: $white;
+        }
+    }
+    .share__button--icon {
+        font-family: $icon-font;
+        line-height: 2em;
+    }
+    .share__button--text {
+        display: none;
+    }
+    .share__button--facebook {
+        background-color: $facebook-brand;
+        .share__button--icon:before {
+            content: '\e81c';
+        }
+    }
+    .share__button--twitter {
+        background-color: $twitter-brand;
+        .share__button--icon:before {
+            content: "\e81e";
+        }
+    }
+    .share__button--linkedin {
+        background-color: $linkdin-brand;
+        .share__button--icon:before {
+            content: "\e81c";
+        }
+    }
+    .share__button--google-plus {
+        background-color: $google-plus-brand;
+        .share__button--icon:before {
+            content: "\e81d";
+        }
+    }
+    .share__button--pinterest {
+        background-color: $pintrest-brand;
+        .share__button--icon:before {
+            content: "\e823";
+        }
+    }
+    .share__button-email {
+        background-color: $main-colour;
+        .share__button--icon:before {
+            content: "\e804";
+        }
+    }
+}

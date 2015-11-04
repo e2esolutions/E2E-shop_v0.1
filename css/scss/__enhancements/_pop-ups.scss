@@ -1,0 +1,39 @@
+@if $pop-ups == true {
+    /*
+     * ##POP-UPS.SCSS
+     */
+
+    .pop-wrapper {
+        @include position(fixed, 0 null null 0);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: 2147483647;
+        background: rgba(0,0,0,0.4);
+        box-sizing: border-box;
+        overflow-y: scroll;
+        .popup {
+            width: 100%;
+            max-width: $pop-width;
+            margin: 0 auto;
+            @include position(relative, 100px null null null);
+            background-color: $white;
+            padding: 20px;
+            .popup--close {
+                @include position(absolute, 0 0 null null);
+            }
+        }
+    }
+    
+    @if $responsive == true {
+        @media screen and (max-width: $pop-width) {
+            .pop-wrapper {
+                .popup {
+                    @include position(relative, 0 0 0 0);
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+}

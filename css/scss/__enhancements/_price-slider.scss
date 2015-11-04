@@ -1,0 +1,29 @@
+/*
+ * ##PRICE-SLIDER
+ */
+.slider-range {
+    width: 100%;
+    height: 3px;
+    position: relative;
+    background-color: $main-colour;
+    margin-top: 20px;
+}
+.slider-amount {
+    width: 100%;
+}
+.ui-slider-handle {
+    height: 16px;
+    width: 16px;
+    background-color: $main-colour;
+    display: inline-block;
+    position: absolute;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 100%;
+    top: -6px;
+}
+.ui-slider-range {
+    background-color: $main-colour;
+    height: 3px;
+    position: absolute;
+    top: 0;
+}

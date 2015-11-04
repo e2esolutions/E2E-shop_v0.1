@@ -1,0 +1,71 @@
+/*
+ * Forms
+ */
+ 
+#{$all-text-inputs},
+select {
+    padding: .275em;
+}
+
+#{$all-text-inputs-focus} {
+  border: 1px solid $main-colour;
+}
+
+.content {
+    p {
+        a {
+            color: $main-colour;
+        }
+    }
+}
+
+.field {
+    margin: .5em 0;
+    clear: both;
+    display: table;
+    width: 100%;
+    > label {
+        width: 220px;
+        float: left;
+    }
+    > select {
+        width: auto;
+    }
+    > :not(label) {
+        width: 300px;
+        float: left;
+        max-width: 300px;
+    }
+}
+.field--chk-box {
+    margin: 1em 0;
+    > input[type="checkbox"] {
+        width: 5%;
+        margin: .5em 0;
+        display: inline-block;
+    }
+    > :not(input) {
+        width: 90%;
+        display: inline-block;
+    }
+}
+@media screen and(min-width: 561px) {
+    .form-buttons {
+        margin-left: 220px;
+        width: 300px;
+    }
+}
+@media screen and(max-width: 560px) {
+    .form-buttons > * {
+        width: 100% !important;
+        display: block !important;
+        margin: .5em 0;
+        font-size: 1em !important;
+        font-size: 1rem !important;
+    }
+    .field > label {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+}

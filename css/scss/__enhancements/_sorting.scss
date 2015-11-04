@@ -1,0 +1,90 @@
+/*
+ * ##SORTING.SCSS
+ */
+.listing-controls {
+    font-size: .8em;
+    line-height: 1.5em;
+    margin: 1.5em 0;
+    border-bottom: 1px solid $main-colour;
+    padding-bottom: 1em;
+    position: relative;
+    display: table;
+    width: 100%;
+    form {
+        display: inline-block;
+        margin-right: 1em;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+    }
+}
+.listing-controls__layout {
+    text-align: right;
+    ul {
+        width: auto;
+        display: inline-block;
+        li{
+            a {
+            color: $white;
+                span {
+                    &:before {
+                        font-family: $icon-font;
+                        padding-right: .25em;
+                    }
+                }
+            }
+            &.grid a span:before {
+                content:"\e806";
+            }
+            &.list a span:before {
+                content:"\e808";
+            }
+        }
+    }
+}
+
+@if $responsive == true {
+    @media screen and (max-width: $site-width) {
+        .listing-controls {
+            font-size: 1em;
+           >* {
+                width: 50% !important;
+                padding: 0 !important;
+           }
+           >:last-child {
+                width: 100% !important;
+                padding: 0 !important;
+                margin-top: 1em;
+           }
+        }
+    }
+} 
+
+
+.banner {
+    border: 1px solid $main-colour;
+    padding: 1em;
+    display: table;
+    h1 {
+        margin: 0 0 .5em 0;
+    }
+    p {
+        margin: 0 0 .5em 0;
+    }
+}
+.banner__text {
+    width: 60%;
+    float: left;
+}
+.banner__image {
+    width: 35%;
+    float: right;
+}
+p {
+    margin: 0;
+    padding: 0;
+}

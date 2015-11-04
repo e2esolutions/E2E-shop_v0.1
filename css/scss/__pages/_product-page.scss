@@ -1,0 +1,156 @@
+/*
+ * ##PRODUCT-PAGE
+ */
+.price {
+    color: $main-colour;
+    font-size: 1.75em;
+}
+.review__star {
+    display: block;
+    @include size(100% 1.5em);
+    &:before {
+        font-family: $icon-font;
+        content: "\e801 \e801 \e801 \e802 \e802";
+    }
+}
+.product__images {
+    .wrapper {
+        border: 1px solid $main-colour;
+        background-color: $white;
+    }
+    .image-container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .images__thumbs {
+        width: 100%;
+        text-align: center;
+        margin: 1em auto;
+        padding: 2px;
+        .image-container {
+            border: 1px solid $main-colour;
+            width: 16%;
+            display: inline-block;
+            cursor: pointer;
+            &.active {
+                border: 2px solid $black !important;
+            }
+        }
+    }
+    .bx-wrapper {
+        margin: 10px auto 0 auto !important;
+        .images__thumbs {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+            .image-container {
+                border: 1px solid $main-colour;
+                width: 16%;
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.product-details {
+    display: table;
+    .product__data {
+        .product__mod {
+            h2 {
+                font-weight: normal;
+                font-size: 1em;
+                width: auto;
+                display: inline-block;
+            }
+            select {
+                display: block;
+                width: 100%;
+                margin-bottom: 1em;
+            }
+            .selection {
+                width: auto;
+                display: inline-block;
+                font-size: .9em;
+                color: $main-colour;
+            }
+            .mod__grid {
+                padding: 0;
+                list-style: none;
+                margin-top: 0;
+                li {
+                    border: 1px solid $main-colour;
+                    @include size(12% 3em);
+                    text-align: center;
+                    max-width: 3em;
+                    line-height: 3em;
+                    margin: 0 2px;
+                    font-size: .75em;
+                    display: inline-block;
+                    &.active {
+                        border: 2px solid $main-colour;
+                    }
+                }
+                a {
+                    @include size(100%);
+                    display: block;
+                    >* {
+                        @include size(90%);
+                        display: block;
+                        text-align: center;
+                        margin: 5% auto;
+                    }
+                }
+            }
+            .product__basket {
+                display: table;
+                width: 100%;
+                padding: .75em;
+                .product__basket--selected {
+                    display: none;
+                    color: $main-colour;
+                    font-size: .85em;
+                }
+                .product__basket--fields {
+                    margin-top: .75em;
+                    fieldset {
+                        float: left;
+                        width: 50%;
+                        &:first-child {
+                            * {
+                                padding: .5em 0;
+                                margin-right: .5em;
+                            }
+                            input {
+                                width: 26%;
+                                text-align: center;
+                            }
+                        }
+                        input[type=submit] {
+                            width: 100%;
+                            padding: .75em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.product-description {
+    clear: both;
+}
+
+.div[class^="product__mod--"] {
+    opacity: .5;
+    pointer-events: none;
+}
+.disabled {
+    opacity: .5;
+    /*pointer-events: none;*/
+}
+
+
+.product__description {
+    margin: 1em 0;
+}

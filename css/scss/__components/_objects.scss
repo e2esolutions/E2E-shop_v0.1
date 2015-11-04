@@ -1,0 +1,48 @@
+/*
+ * OBJECTS.SCSS
+ */
+body {
+    font: {
+        size: .9em;
+        family: $main-font;
+    }
+}
+.top-bar-wrapper {
+    background-color: $black;
+    .top-bar {
+        background-color: $black;
+    }
+}
+.wrapper.full-width > * {
+    width: $site-width;
+    max-width: $site-width;
+    display: table;
+    margin: 0 auto;
+}
+
+@if $responsive == true {
+    @media screen and (max-width: $site-width) {
+        .wrapper.full-width > * {
+            width: 100%;
+            padding: 0 1em;
+        }
+    } 
+}
+
+.footer-wrapper {
+    background-color: $main-colour;
+}
+.content {
+    display: table;
+    width: 100%;
+}
+.feature {
+    display: table;
+    width: 100%;
+    margin: 0;
+    h2 {
+        padding: .2em .5em;
+        background-color: $main-colour;
+        color: $white;
+    }
+}
